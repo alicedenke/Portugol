@@ -1,22 +1,25 @@
 programa {
 
-  inteiro metros, resultado
-
+  inteiro altura 
   funcao inicio() {
 
-    escreva("Informe quantos metros a parede que a lesma esta subindo tem: ") 
-    leia(metros)
+    escreva ("Qual é a altura da parede?\n")
+    leia(altura)
+    limpa()
 
-    resultado = metros -2 
-    
-    se (metros < 3)
+    se(altura == 1)
     {
-      resultado = 1
+      escreva ("A pobre lesminha levará 1 dia para subir a parede ", altura, " metros ")
     }
-
-
-    escreva("A lesma demorou ", resultado," dias para chegar ao topo do muro")
+      senao
+      se (altura <= 3)
+      {
+        escreva ("A pobre lesminha levará 1 dia para subir a parede de ", altura, " metros  ")
+      }
+    
+    senao {
+      escreva(" A pobre lesminha levará ", altura - 2, " dias para subir a parede de ", altura, " metros ")
+    }
     
   }
-
 }
